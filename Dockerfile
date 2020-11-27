@@ -16,6 +16,7 @@ RUN echo Installing ; \
   apk add --no-cache $RUN_DEPS $RUN_DEPS_EXTRA && \
   echo Building && \
   cd /usr/src/kafkacat && \
+  chmod 755 ./bootstrap.sh && \
   rm -rf tmp-bootstrap && \
   echo "Source versions:" && \
   grep ^github_download ./bootstrap.sh && \
@@ -27,6 +28,6 @@ RUN echo Installing ; \
   apk del .dev_pkgs ; \
   rm -rf /var/cache/apk/*
 
-RUN kafkacat -V
+RUN /usr/bin/kafkacat -V
 
 ENTRYPOINT ["python"]

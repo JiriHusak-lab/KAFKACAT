@@ -17,6 +17,7 @@ RUN echo Installing ; \
   echo Building && \
   cd /usr/src/kafkacat && \
   chmod 755 ./bootstrap.sh && \
+  chmod 755 ./configure && \
   rm -rf tmp-bootstrap && \
   echo "Source versions:" && \
   grep ^github_download ./bootstrap.sh && \

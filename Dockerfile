@@ -29,4 +29,4 @@ RUN echo Installing ; \
 
 RUN kafkacat -V
 
-ENTRYPOINT ["kafkacat"]
+ENTRYPOINT ["python"]

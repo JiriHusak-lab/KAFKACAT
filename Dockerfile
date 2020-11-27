@@ -31,4 +31,5 @@ RUN echo Installing ; \
 
 RUN /usr/bin/kafkacat -V
 
-ENTRYPOINT ["python"]
+#ENTRYPOINT ["python"]
+CMD tail -f /dev/null
